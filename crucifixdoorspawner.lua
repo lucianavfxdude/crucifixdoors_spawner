@@ -14,6 +14,8 @@ local PlayersStandlone = game:GetService("Players")
 local Plr = PlayersStandlone.LocalPlayer
 local Inventory = Plr.Backpack
 
+firesignal(game.ReplicatedStorage.RemotesFolder.Caption.OnClientEvent, "door spawner loaded | script by @spindash")
+
 local j  = game.Players.LocalPlayer:GetMouse() -- [APART OF KEYBIND!]
 
 j.KeyDown:Connect(function(key) -- [APART OF KEYBIND!]
@@ -48,3 +50,4 @@ end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 
 warn("made by @spindash on discord | script loaded")
+
