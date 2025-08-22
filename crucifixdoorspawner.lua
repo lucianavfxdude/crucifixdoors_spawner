@@ -31,7 +31,7 @@ proximityprompt.Name = "Collect"
 proximityprompt.MaxActivationDistance = 9
 proximityprompt.Style = "Custom"
 
-local currentroomvalue = game:GetService("Players").LocalPlayer:GetAttribute("CurrentRoom")
+local currentroomvalue = Plr:GetAttribute("CurrentRoom")
 local currentroommodel = Wc.CurrentRooms[currentroomvalue]
 local door = currentroommodel.RoomEntrance
 
@@ -48,5 +48,6 @@ end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 
 warn("made by @spindash on discord | script loaded")
+
 
 
