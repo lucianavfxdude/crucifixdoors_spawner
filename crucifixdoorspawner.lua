@@ -21,21 +21,21 @@ local j  = game.Players.LocalPlayer:GetMouse() -- [APART OF KEYBIND!]
 j.KeyDown:Connect(function(key) -- [APART OF KEYBIND!]
  if key == "j" then -- [APART OF KEYBIND!]
 local crucifixnode = game:GetObjects("rbxassetid://88548470926281")[1]
-crucifixnode.Name = "CrucifixShell"
 crucifixnode.Parent = Wc
-crucifixnode.Color = Color3.fromRGB(81, 69, 63)
-crucifixnode.Material = "Wood"
+crucifixnode.Handle.Color = Color3.fromRGB(81, 69, 63)
+crucifixnode.Handle.Material = "Wood"
 -- local newhighlight = Instance.new("Highlight",crucifixnode)
-local proximityprompt = Instance.new("ProximityPrompt",crucifixnode)
+local proximityprompt = Instance.new("ProximityPrompt",crucifixnode.Handle)
 proximityprompt.Name = "Collect"
 proximityprompt.MaxActivationDistance = 9
 proximityprompt.Style = "Custom"
 
-local currentroomvalue = Plr:GetAttribute("CurrentRoom")
-local currentroommodel = Wc.CurrentRooms[currentroomvalue]
-local door = currentroommodel.RoomEntrance
+local crv = Plr:GetAttribute("CurrentRoom")
+local crm = Wc.CurrentRooms[crv]
+local door = crm.RoomEntrance
 
-crucifixnode.CFrame = door.CFrame + Vector3.new(0, 5.8, -0.55)
+crucifixnode.Parent = crm.Assets
+crucifixnode.Handle.CFrame = door.CFrame + Vector3.new(0, 5.8, -0.55)
 warn("made by @spindash | spawned crucifix on door") -- credit purposes
 
 crucifixnode.Collect.Triggered:Connect(function()
@@ -48,6 +48,7 @@ end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 
 warn("made by @spindash on discord | script loaded")
+
 
 
 
