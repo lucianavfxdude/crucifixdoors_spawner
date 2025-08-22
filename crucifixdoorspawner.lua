@@ -25,10 +25,10 @@ crucifixnode.Parent = Wc
 crucifixnode.Handle.Color = Color3.fromRGB(81, 69, 63)
 crucifixnode.Handle.Material = "Wood"
 -- local newhighlight = Instance.new("Highlight",crucifixnode)
-local proximityprompt = Instance.new("ProximityPrompt",crucifixnode.Handle)
-proximityprompt.Name = "Collect"
-proximityprompt.MaxActivationDistance = 9
-proximityprompt.Style = "Custom"
+local pp = Instance.new("ProximityPrompt",crucifixnode.Handle)
+pp.Name = "Collect"
+pp.MaxActivationDistance = 9
+pp.Style = "Custom"
 
 local crv = Plr:GetAttribute("CurrentRoom")
 local crm = Wc.CurrentRooms[crv]
@@ -38,7 +38,7 @@ crucifixnode.Parent = crm.Assets
 crucifixnode.Handle.CFrame = door.CFrame + Vector3.new(0, 5.8, -0.55)
 warn("made by @spindash | spawned crucifix on door") -- credit purposes
 
-crucifixnode.Collect.Triggered:Connect(function()
+pp.Triggered:Connect(function()
 	local crucifixgive = game:GetObjects("rbxassetid://89332862603547")[1]
 	crucifixgive.Parent = Inventory
     crucifixnode:Destroy()
@@ -48,8 +48,5 @@ end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 
 warn("made by @spindash on discord | script loaded")
-
-
-
 
 
