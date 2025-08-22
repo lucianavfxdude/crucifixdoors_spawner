@@ -38,13 +38,13 @@ warn("made by @spindash | spawned crucifix on door") -- credit purposes
 
 crucifixnode.Collect.Triggered:Connect(function()
     local decoycrucgive = game:GetObjects("rbxassetid://89332862603547")[1]
-    decoycrucgive.Parent = Inventory
+	decoycrucgive.Parent = Inventory
     crucifixnode.Transparency = 1
     proximityprompt.Enabled = false
-    wait(0.25)
     crucifixnode:Destroy()
     warn("made by @spindash | crucifix collected + node mockup deleted")
 end)
 end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
+
 warn("made by @spindash on discord | script loaded")
