@@ -39,8 +39,7 @@ crucifixnode.CFrame = door.CFrame + Vector3.new(0, 5.8, -0.55)
 warn("made by @spindash | spawned crucifix on door") -- credit purposes
 
 crucifixnode.Collect.Triggered:Connect(function()
-    local decoycrucgive = game:GetObjects("rbxassetid://89332862603547")[1]
-	decoycrucgive.Parent = Inventory
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/lucianavfxdude/vynixureupload2025/refs/heads/main/VynixuReUploadload.lua"))()
     crucifixnode.Transparency = 1
     proximityprompt.Enabled = false
     crucifixnode:Destroy()
@@ -50,4 +49,3 @@ end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 
 warn("made by @spindash on discord | script loaded")
-
