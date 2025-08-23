@@ -25,7 +25,7 @@ crucifixnode.Parent = Wc
 crucifixnode.Handle.Color = Color3.fromRGB(81, 69, 63)
 crucifixnode.Handle.Material = "Wood"
 -- local newhighlight = Instance.new("Highlight",crucifixnode)
-local pp = Instance.new("ProximityPrompt",crucifixnode)
+local pp = Instance.new("ProximityPrompt",crucifixnode.Handle)
 pp.Name = "Collect"
 pp.MaxActivationDistance = 9
 pp.Style = "Custom"
@@ -47,6 +47,7 @@ end)
 end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 warn("made by @spindash on discord | script loaded")
+
 
 
 
