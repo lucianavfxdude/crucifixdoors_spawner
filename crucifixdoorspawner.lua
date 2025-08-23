@@ -27,15 +27,15 @@ crucifixnode.Handle.Material = "Wood"
 -- local newhighlight = Instance.new("Highlight",crucifixnode)
 local pp = Instance.new("ProximityPrompt",crucifixnode.Handle)
 pp.Name = "Collect"
-pp.MaxActivationDistance = 7
+pp.MaxActivationDistance = 13
 pp.Style = "Custom"
 
 local crv = Plr:GetAttribute("CurrentRoom")
 local crm = Wc.CurrentRooms[crv]
-local door = crm.RoomEntrance
+local doorpos = crm.Hidden
 
 crucifixnode.Parent = crm.Assets
-crucifixnode.Handle.CFrame = door.CFrame + Vector3.new(0, 5.8, -0.55)
+crucifixnode.Handle.CFrame = doorpos.CFrame + Vector3.new(0, 5.8, -0.55)
 warn("made by @spindash | spawned crucifix on door") -- credit purposes
 
 pp.Triggered:Connect(function()
