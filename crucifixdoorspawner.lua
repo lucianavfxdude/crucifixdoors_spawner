@@ -47,7 +47,3 @@ end)
 end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 warn("made by @spindash on discord | script loaded")
-
-
-
-
