@@ -21,7 +21,7 @@ local KEYBIND  = game.Players.LocalPlayer:GetMouse() -- [APART OF KEYBIND!]
 KEYBIND.KeyDown:Connect(function(key) -- [APART OF KEYBIND!]
  if key == "v" then -- [APART OF KEYBIND!]
 local crucifixnode = game:GetObjects("rbxassetid://79752125325903")[1]
-crucifixnode.Handle.Parent = Wc
+crucifixnode.Parent = Wc
 crucifixnode.Handle.Color = Color3.fromRGB(81, 69, 63)
 crucifixnode.Handle.Material = "Wood"
 -- local newhighlight = Instance.new("Highlight",crucifixnode)
@@ -47,5 +47,6 @@ end)
 end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 warn("made by @spindash on discord | script loaded")
+
 
 
