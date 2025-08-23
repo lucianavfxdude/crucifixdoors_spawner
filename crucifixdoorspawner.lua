@@ -35,7 +35,8 @@ local crm = Wc.CurrentRooms[crv]
 local door = crm.RoomEntrance
 
 crucifixnode.Parent = crm.Assets
-crucifixnode.Position = door.CFrame + Vector3.new(0, 5.8, -0.55)
+crucifixnode.Handle.CFrame = door.CFrame + Vector3.new(0, 5.8, -0.55)
+crucifixnode.WorldPivot = door.CFrame + Vector3.new(0, 5.8, -0.55)
 warn("made by @spindash | spawned crucifix on door") -- credit purposes
 
 pp.Triggered:Connect(function()
@@ -47,3 +48,4 @@ end)
 end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 warn("made by @spindash on discord | script loaded")
+
