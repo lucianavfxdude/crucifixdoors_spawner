@@ -22,10 +22,10 @@ j.KeyDown:Connect(function(key) -- [APART OF KEYBIND!]
  if key == "j" then -- [APART OF KEYBIND!]
 local crucifixnode = game:GetObjects("rbxassetid://79752125325903")[1]
 crucifixnode.Parent = Wc
-crucifixnode.Handle.Color = Color3.fromRGB(81, 69, 63)
-crucifixnode.Handle.Material = "Wood"
+crucifixnode.Color = Color3.fromRGB(81, 69, 63)
+crucifixnode.Material = "Wood"
 -- local newhighlight = Instance.new("Highlight",crucifixnode)
-local pp = Instance.new("ProximityPrompt",crucifixnode.Handle)
+local pp = Instance.new("ProximityPrompt",crucifixnode)
 pp.Name = "Collect"
 pp.MaxActivationDistance = 9
 pp.Style = "Custom"
@@ -35,7 +35,7 @@ local crm = Wc.CurrentRooms[crv]
 local door = crm.RoomEntrance
 
 crucifixnode.Parent = crm.Assets
-crucifixnode.WorldPivot = door.CFrame + Vector3.new(0, 5.8, -0.55)
+crucifixnode.CFrame = door.CFrame + Vector3.new(0, 5.8, -0.55)
 warn("made by @spindash | spawned crucifix on door") -- credit purposes
 
 pp.Triggered:Connect(function()
@@ -47,6 +47,3 @@ end)
 end -- [APART OF KEYBIND!]
 end) -- [APART OF KEYBIND!]
 warn("made by @spindash on discord | script loaded")
-
-
-
